@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shatha Albaraiki | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a class="logo" href="#top">Shatha Albaraiki</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" type="button">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#visitor-stats">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero fade-in">
+      <p id="greeting" class="greeting"></p>
+
+      <h1>Hey, It's <span class="accent">Shatha Albaraiki</span>!</h1>
+
+      <p class="tagline">
+        Shatha, or Shosho, is what I prefer. I'm a 21-year-old Software Engineering student
+        interested in front-end development, UI design, and building user-friendly digital experiences.
+      </p>
+
+      <a class="primary-btn" href="#projects">View Projects</a>
+
+      <div class="card visitor-card">
+        <h3>Personalize Your Experience</h3>
+        <label for="visitorName">Your name</label>
+        <input
+          type="text"
+          id="visitorName"
+          placeholder="Enter your name"
+          aria-label="Enter your name"
+        />
+        <button class="primary-btn" id="saveNameBtn" type="button">
+          Save Name
+        </button>
+        <p id="visitorMessage" class="visitor-message" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section fade-in">
+      <h2>Portfolio Dashboard</h2>
+      <p class="section-note">A quick overview of this portfolio web application.</p>
+      
+      <div class="dashboard-grid">
+        <div class="stat-card">
+          <h3 id="projectCount">0</h3>
+          <p>Projects</p>
+        </div>
+        <div class="stat-card">
+          <h3>5+</h3>
+          <p>Skills Areas</p>
+        </div>
+        <div class="stat-card">
+          <h3>1</h3>
+          <p>External API</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Responsive</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section fade-in">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <img
+          class="profile"
+          src="assets/images/about-pic.jpg"
+          alt="Photo of Shatha Albaraiki"
+          loading="lazy"
+        />
+        <p>
+          I'm a junior Software Engineering student at KFUPM. I'm interested in front-end web development
+          and UI design. I enjoy modern decorative, folk-inspired, and contemporary illustrative art.
+          One of my favorite hobbies is walking because it gives me quiet time to relax and think.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section fade-in">
+      <h2>Projects</h2>
+      <p class="section-note">
+        Use the controls below to filter and sort projects by category and date.
+      </p>
+      <div class="project-search">
+        <label for="projectSearch">Search projects:</label>
+        <input
+        type="text"
+        id="projectSearch"
+        placeholder="Search by project name or description"
+        aria-label="Search projects"
+        />
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="web">Web</button>
+        <button class="filter-btn" type="button" data-filter="react">React</button>
+        <button class="filter-btn" type="button" data-filter="ui">UI/UX</button>
+      </div>
+
+      <div class="project-controls">
+        <label for="sortProjects">Sort projects:</label>
+        <select id="sortProjects" aria-label="Sort projects">
+          <option value="default">Default Order</option>
+          <option value="az">A-Z</option>
+          <option value="za">Z-A</option>
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+      </div>
+
+      <p id="projectFeedback" class="project-feedback" aria-live="polite"></p>
+
+      <div class="cards" id="projectCards">
+        <article
+          class="card project-card"
+          data-category="web ui"
+          data-title="Tutor Link"
+          data-date="2024-11-10"
+        >
+          <img
+            src="assets/images/tutor-link.png"
+            alt="Tutor Link project preview"
+            loading="lazy"
+          />
+          <span class="project-tag">Web / UI</span>
+          <h3>Tutor Link</h3>
+          <p class="project-meta">Date: Nov 2024</p>
+          <p>
+            Tutor Link is a software platform designed to connect students with qualified tutors.
+            It supports registration for learners and tutors, course searching and filtering,
+            and a feedback system to improve the learning experience.
+          </p>
+          <a class="secondary-btn project-link" href="Coming soon">View Project</a>
+        </article>
+
+        <article
+          class="card project-card"
+          data-category="web react ui"
+          data-title="Delivery Application"
+          data-date="2025-02-20"
+        >
+          <img
+            src="assets/images/food-delivery-app-logo.jpg"
+            alt="Delivery app project preview"
+            loading="lazy"
+          />
+          <span class="project-tag">React / Web</span>
+          <h3>Delivery Application</h3>
+          <p class="project-meta">Date: Feb 2025</p>
+          <p>
+            A React-based delivery service application focused on a smooth and user-friendly experience.
+            Users can browse products, add items to a cart, and manage orders through a responsive interface.
+          </p>
+          <a class="secondary-btn project-link" href="Coming soon">View Project</a>
+        </article>
+      </div>
+
+      <p id="emptyState" class="empty-state" hidden>No projects found in this category.</p>
+    </section>
+
+    <section id="skills" class="section fade-in">
+      <h2>Skills</h2>
+      <p class="section-note">
+        These are some of the tools and technologies I use in my coursework and projects.
+      </p>
+      <ul>
+        <li>Programming Languages (Java, Python, C, VB.NET)</li>
+        <li>Web Development (HTML, CSS, JavaScript, Flutter)</li>
+        <li>Software & Development Tools (Visual Studio, R Studio, MATLAB, AutoCAD, Figma)</li>
+        <li>Frameworks (React, JavaFX)</li>
+        <li>Version Control (Git/GitHub)</li>
+      </ul>
+    </section>
+
+    <section id="music" class="section fade-in">
+      <h2>Music Explorer</h2>
+      <p class="section-note">
+        Try searching Arabic artists like Amr Diab, Fairuz, and Mohammad Abdu.
+      </p>
+
+      <div class="music-controls">
+        <input
+          type="text"
+          id="musicSearch"
+          placeholder="Enter artist or song name"
+          aria-label="Search for music"
+        />
+        <button class="primary-btn" id="musicBtn" type="button">Search Music</button>
+      </div>
+
+      <p id="musicStatus" class="music-status" aria-live="polite"></p>
+
+      <div id="musicResults" class="music-results"></div>
+    </section>
+
+    <section id="visitor-stats" class="section fade-in">
+      <h2>Interactive Features</h2>
+      <p class="section-note">
+        This section tracks simple interactive state on the page.
+      </p>
+      <p id="timeOnSite" class="timer-text">Time on site: 0 minute(s) and 0 second(s)</p>
+    </section>
+
+    <section id="contact" class="section fade-in">
+      <h2>Contact</h2>
+      <p class="section-note">
+        Fill in the form below. All fields are required.
+      </p>
+
+      <form class="form" id="contactForm" novalidate>
+        <label for="name">
+          Name
+          <input type="text" id="name" name="name" placeholder="Your name" />
+        </label>
+
+        <label for="email">
+          Email
+          <input type="email" id="email" name="email" placeholder="you@example.com" />
+        </label>
+
+        <label for="message">
+          Message
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+          ></textarea>
+        </label>
+
+        <button class="primary-btn" type="submit">Send</button>
+        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Shatha Albaraiki. All rights reserved.</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+    ↑
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
