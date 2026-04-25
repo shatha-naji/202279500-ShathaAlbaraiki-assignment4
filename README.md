@@ -84,7 +84,7 @@ The website presents my background, projects, skills, interactive features, and 
 ## How to Run Locally
 
 Clone the repository:
-git clone 
+git clone https://github.com/shatha-naji/202279500-ShathaAlbaraiki-assignment4.git
 
 Open the project folder in VS Code.
 Run using:
